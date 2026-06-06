@@ -27,12 +27,22 @@
     {
       "@type": "Question",
       "name": "本当に無料ですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "はい。現在の塾の状況や学習課題を整理する初回診断は無料です。" }
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。現在の塾の状況や学習課題を整理する初回診断は無料です。無理な勧誘も一切ありません。" }
     },
     {
       "@type": "Question",
       "name": "必ず転塾を勧められますか？",
       "acceptedAnswer": { "@type": "Answer", "text": "いいえ。現在の塾を活かせる場合は、継続を前提にした改善案をお伝えします。診断結果のおよそ4割が「今の塾を継続」の結論です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "いつ相談すればいいですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "迷った時点でのご相談で構いません。学年の変わり目や長期休暇明けは塾を切り替えやすい時期です。受験を見据える場合は、本番の約1年前までにご相談いただくと選択肢を十分に検討できます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "集団・個別・映像など、塾のタイプ選びも相談できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。集団指導・個別指導・映像授業・自律学習型には、それぞれ向き・不向きがあります。お子さまの学習タイプと志望校から、どの形態が合うかを中立に整理します。" }
     },
     {
       "@type": "Question",
@@ -413,6 +423,36 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
     .float-cta .btn-line { width: auto; margin: 0; }
   }
 
+  /* ───────────────── Judgment criteria ───────────────── */
+  .judge { background: var(--card); }
+  .judge-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 760px) { .judge-grid { grid-template-columns: 1fr 1fr; } }
+  .judge-card { border: 1px solid var(--line); border-radius: 20px; padding: 26px 28px 28px; background: var(--paper); }
+  .judge-card.change { border-top: 3px solid var(--accent); }
+  .judge-card.stay { border-top: 3px solid var(--gold); }
+  .judge-card .jc-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .judge-card .jc-tag { font-family: var(--display); font-style: italic; font-size: 13.5px; letter-spacing: 0.06em; padding: 4px 13px; border-radius: 999px; flex: 0 0 auto; }
+  .judge-card.change .jc-tag { background: var(--accent-soft); color: var(--accent); }
+  .judge-card.stay .jc-tag { background: var(--gold-soft); color: #8a6a22; }
+  .judge-card .jc-head h3 { font-size: 17px; line-height: 1.5; }
+  .judge-card ul { list-style: none; display: grid; gap: 12px; }
+  .judge-card li { position: relative; padding-left: 26px; font-size: 14.5px; line-height: 1.8; color: var(--text); }
+  .judge-card li::before { position: absolute; left: 0; top: 0; font-weight: 900; }
+  .judge-card.change li::before { content: "▲"; color: var(--accent); font-size: 11px; top: 4px; }
+  .judge-card.stay li::before { content: "✓"; color: var(--gold); }
+  .judge-note { margin: 24px auto 0; max-width: 720px; text-align: center; font-size: 14.5px; color: var(--navy-soft); font-weight: 600; line-height: 1.95; }
+  .judge-note b { color: var(--accent); font-weight: 700; }
+
+  /* ───────────────── Supervision / credibility ───────────────── */
+  .sup { background: var(--paper-2); }
+  .sup-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 560px) { .sup-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 980px) { .sup-grid { grid-template-columns: repeat(4, 1fr); } }
+  .sup-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px 22px 26px; box-shadow: var(--shadow-sm); }
+  .sup-card .si { width: 46px; height: 46px; border-radius: 13px; background: var(--navy); color: var(--gold); display: inline-flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 700; font-size: 21px; margin-bottom: 15px; }
+  .sup-card h3 { font-size: 15.5px; line-height: 1.6; margin-bottom: 7px; }
+  .sup-card p { font-size: 13px; color: var(--muted); line-height: 1.85; }
+
   /* ───────────────── Scroll reveal ───────────────── */
   .fx { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2,0.7,0.2,1); }
   .fx.in { opacity: 1; transform: none; }
@@ -514,6 +554,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ═══════════ Judgment criteria ═══════════ -->
+<section class="judge">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker fx">stay or switch</span>
+      <h2 class="fx fx-d1">「続けるべきか・変えるべきか」は、<br class="sp-br" /><span class="acc">原因の切り分け</span>で決まります。</h2>
+      <p class="lead fx fx-d2">転塾は珍しいことではありません。大切なのは、成績が伸びない原因が「塾側」にあるのか「家庭側」にあるのかを見極めることです。</p>
+    </div>
+    <div class="judge-grid">
+      <div class="judge-card change fx">
+        <div class="jc-head"><span class="jc-tag">switch</span><h3>変える・補強を検討するサイン</h3></div>
+        <ul>
+          <li>半年以上通っても、成績が横ばい・下降している</li>
+          <li>塾に行きたがらない／講師・クラスの雰囲気と合っていない</li>
+          <li>宿題を「答え写し」で済ませ、理解が確認されていない</li>
+          <li>志望校までの学習計画と進捗管理が見えない</li>
+          <li>面談が形式的で、家庭での動き方が分からない</li>
+        </ul>
+      </div>
+      <div class="judge-card stay fx fx-d1">
+        <div class="jc-head"><span class="jc-tag">stay</span><h3>今は「続ける」が正解のことも</h3></div>
+        <ul>
+          <li>塾との相性は悪くなく、家庭学習の設計だけが不足している</li>
+          <li>成績停滞の主因が、塾ではなく学習習慣・勉強時間にある</li>
+          <li>通い始めて3ヶ月未満で、まだ効果が出る前である</li>
+          <li>本人の意思を置き去りに、親だけで転塾を決めようとしている</li>
+        </ul>
+      </div>
+    </div>
+    <p class="judge-note fx fx-d2">原因が家庭側にある場合、塾を変えても同じ悩みは繰り返します。だからこそ私たちは、最初に<b>「原因が塾側か・家庭側か」</b>を切り分けてから、続ける／補強する／変えるを一緒に判断します。</p>
+  </div>
+</section>
+
 <!-- ═══════════ Quote band ═══════════ -->
 <section class="quoteband">
   <div class="wrap">
@@ -580,6 +653,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="type-tag"><div class="ltr">D</div><div class="tone">REBUILD</div></div>
         <div class="type-body"><h3>受験戦略から作り直すべき</h3><p>志望校・現在地・教材・学習時間の整理から必要な状態。まず合格までの道筋を設計します。</p><span class="pill">TYPE 04</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Supervision / credibility ═══════════ -->
+<section class="sup">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker fx">supervised by</span>
+      <h2 class="fx fx-d1">診断は、<span class="gold">大学受験専門塾の指導陣</span>が監修。</h2>
+      <p class="lead fx fx-d2">集団・個別・映像・自律学習——あらゆる指導形態の特性を理解したうえで、特定の塾ありきではなく中立に整理します。</p>
+    </div>
+    <div class="sup-grid">
+      <div class="sup-card fx"><div class="si">専</div><h3>大学受験に特化</h3><p>文系専門塾プラトン／理系専門塾ガリレオを運営する指導陣が監修。受験指導の現場知見をもとに診断します。</p></div>
+      <div class="sup-card fx fx-d1"><div class="si">型</div><h3>4つの指導形態を横断</h3><p>集団指導・個別指導・映像授業・自律学習型、それぞれの向き・不向きを理解し、お子さまに合う型を比較します。</p></div>
+      <div class="sup-card fx fx-d2"><div class="si">計</div><h3>学習管理の設計力</h3><p>毎日やるべき課題の明確化と、志望校から逆算したロードマップで、勉強を「やる気任せ」にしない設計が強みです。</p></div>
+      <div class="sup-card fx fx-d3"><div class="si">中</div><h3>勧誘ありきではない</h3><p>「今の塾を続けるべき」と判断すれば、そのままで大丈夫とお伝えします。結論を誘導しない第三者の立場です。</p></div>
     </div>
   </div>
 </section>
@@ -683,8 +773,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="fx fx-d1">よくある質問</h2>
     </div>
     <div class="faq-list">
-      <details class="fx" open><summary>本当に無料ですか？</summary><p>はい。現在の塾の状況や学習課題を整理する初回診断は無料です。</p></details>
+      <details class="fx" open><summary>本当に無料ですか？</summary><p>はい。現在の塾の状況や学習課題を整理する初回診断は無料です。無理な勧誘も一切ありません。</p></details>
       <details class="fx"><summary>必ず転塾を勧められますか？</summary><p>いいえ。現在の塾を活かせる場合は、継続を前提にした改善案をお伝えします。診断結果のおよそ4割が「今の塾を継続」の結論です。</p></details>
+      <details class="fx"><summary>いつ相談すればいいですか？</summary><p>迷った時点でのご相談で構いません。学年の変わり目や長期休暇明けは塾を切り替えやすい時期です。受験を見据える場合は、本番の約1年前までにご相談いただくと選択肢を十分に検討できます。</p></details>
+      <details class="fx"><summary>集団・個別・映像など、塾のタイプ選びも相談できますか？</summary><p>はい。集団指導・個別指導・映像授業・自律学習型には、それぞれ向き・不向きがあります。お子さまの学習タイプと志望校から、どの形態が合うかを中立に整理します。</p></details>
       <details class="fx"><summary>現在の塾名を伝える必要はありますか？</summary><p>任意です。塾名よりも、授業形式・宿題管理・面談頻度・学習計画の有無などを重視して診断します。</p></details>
       <details class="fx"><summary>中学生でも相談できますか？</summary><p>はい。中学生から高校生、大学受験を見据えたご家庭までご相談いただけます。</p></details>
       <details class="fx"><summary>オンラインだけで完結しますか？</summary><p>はい。LINEまたはZoom（30分）で完結します。お住まいの地域は問いません。</p></details>
