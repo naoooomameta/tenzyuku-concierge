@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>転塾コンシェルジュ｜今の塾、続けるべきか・変えるべきか。第三者目線の無料診断</title>
+<meta name="description" content="塾に通っているのに成績が伸びない高校生のご家庭へ。今の塾を続けるべきか・転塾すべきかを、大学受験専門の第三者目線で無料診断します。無理な勧誘はしません。">
+
+<!-- ▼差し替え：純粋な広告専用LPにしたい場合は content を「noindex, nofollow」に変更 -->
+<meta name="robots" content="index, follow">
+
+<!-- OGP -->
+<meta property="og:title" content="転塾コンシェルジュ｜今の塾、続けるべきか・変えるべきか。">
+<meta property="og:description" content="塾に通っているのに成績が伸びないご家庭へ。続けるべきか・変えるべきかを第三者目線で無料診断します。">
+<meta property="og:type" content="website">
+<!-- ▼差し替え：OGP画像URL -->
+<meta property="og:image" content="https://example.com/ogp.png">
+
+<!-- ▼差し替え：Google Tag Manager（GTM_ID_HERE をコンテナIDに） -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM_ID_HERE');</script>
+
+<!-- ▼差し替え：Meta Pixel（PIXEL_ID_HERE を転塾コンシェルジュ専用のPixel IDに） -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','PIXEL_ID_HERE');
+fbq('track','PageView');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#f6f2ea;
+  --paper-2:#fbf8f2;
+  --ink:#1e2c3a;
+  --ink-2:#33444f;
+  --ink-soft:#5c6b75;
+  --muted:#8c8478;
+  --gold:#9a7c41;
+  --gold-soft:#c2a463;
+  --line:rgba(30,44,58,.13);
+  --line-2:rgba(30,44,58,.07);
+  --shadow:0 18px 50px -28px rgba(30,44,58,.45);
+  --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Zen Kaku Gothic New",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.95;
+  letter-spacing:.01em;
+  font-weight:400;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+/* 紙のような微細な質感 */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(120% 80% at 50% -10%, var(--paper-2), transparent 60%),
+    radial-gradient(100% 60% at 100% 110%, #efe9dd, transparent 55%);
+  opacity:.9;
+}
+.serif{font-family:"Shippori Mincho",serif}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 26px}
+.label{
+  font-family:"Shippori Mincho",serif;
+  font-size:.72rem;letter-spacing:.42em;text-indent:.42em;
+  color:var(--gold);font-weight:600;text-transform:uppercase;
+  display:flex;align-items:center;gap:14px;
+}
+.label::before{content:"";width:34px;height:1px;background:var(--gold-soft)}
+.num{
+  font-family:"Shippori Mincho",serif;font-style:italic;
+  color:var(--gold-soft);font-size:.92rem;letter-spacing:.1em;
+}
+
+/* ---------- ボタン ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;
+  font-size:1.02rem;letter-spacing:.04em;
+  color:var(--paper-2);background:var(--ink);
+  padding:19px 38px;border:none;border-radius:2px;cursor:pointer;
+  text-decoration:none;position:relative;overflow:hidden;
+  transition:transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s, background .35s;
+  box-shadow:var(--shadow);
+}
+.btn::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent,rgba(194,164,99,.28),transparent);
+  transform:translateX(-120%);transition:transform .7s ease;
+}
+.btn:hover{transform:translateY(-3px);background:#16222e}
+.btn:hover::after{transform:translateX(120%)}
+.btn .arr{font-family:"Shippori Mincho",serif;font-size:1.1rem;line-height:1}
+.btn-line{
+  width:22px;height:22px;border-radius:5px;background:var(--gold-soft);
+  display:inline-grid;place-items:center;font-size:.7rem;color:var(--ink);font-weight:700;
+}
+
+/* ---------- ヘッダー ---------- */
+header{
+  position:fixed;top:0;left:0;width:100%;z-index:50;
+  padding:20px 0;transition:background .4s, padding .4s, box-shadow .4s;
+}
+header.solid{background:rgba(246,242,234,.92);backdrop-filter:blur(10px);padding:13px 0;box-shadow:0 1px 0 var(--line-2)}
+.head-row{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.22rem;letter-spacing:.12em;color:var(--ink)}
+.brand small{display:block;font-size:.56rem;letter-spacing:.34em;color:var(--gold);font-weight:600;margin-top:2px}
+.head-cta{
+  font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:.85rem;
+  color:var(--ink);text-decoration:none;border:1px solid var(--ink);
+  padding:10px 20px;border-radius:2px;transition:.3s;letter-spacing:.04em;
+}
+.head-cta:hover{background:var(--ink);color:var(--paper-2)}
+@media(max-width:620px){.head-cta{display:none}}
+
+/* ---------- ヒーロー ---------- */
+.hero{position:relative;padding:170px 0 96px}
+.hero .wrap{position:relative}
+.hero-rule{
+  position:absolute;left:26px;top:0;width:1px;height:100%;
+  background:linear-gradient(var(--gold-soft),transparent);opacity:.5;
+}
+.hero-inner{padding-left:38px}
+@media(max-width:620px){.hero-inner{padding-left:24px}.hero-rule{left:26px}}
+.hero h1{
+  font-family:"Shippori Mincho",serif;font-weight:700;
+  font-size:clamp(2.15rem,7vw,4.3rem);line-height:1.42;
+  letter-spacing:.02em;margin:26px 0 0;color:var(--ink);
+}
+.hero h1 .em{
+  position:relative;white-space:nowrap;
+}
+.hero h1 .em::after{
+  content:"";position:absolute;left:-2%;right:-2%;bottom:.12em;height:.42em;
+  background:rgba(194,164,99,.32);z-index:-1;border-radius:1px;
+}
+.hero p.lead{
+  font-size:clamp(1rem,2.4vw,1.18rem);color:var(--ink-2);
+  margin:30px 0 0;max-width:30em;line-height:2.1;
+}
+.hero p.lead b{font-weight:700;color:var(--ink)}
+.hero-actions{margin-top:42px;display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.trust{
+  display:flex;align-items:flex-start;gap:10px;margin-top:34px;
+  font-size:.82rem;color:var(--ink-soft);max-width:34em;line-height:1.85;
+}
+.trust .dot{flex:none;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-top:9px}
+.trust b{color:var(--ink-2);font-weight:700}
+
+/* ---------- セクション共通 ---------- */
+section{position:relative}
+.sec{padding:90px 0}
+.sec-head{margin-bottom:50px}
+.sec-head h2{
+  font-family:"Shippori Mincho",serif;font-weight:700;
+  font-size:clamp(1.55rem,4.4vw,2.5rem);line-height:1.5;
+  letter-spacing:.02em;margin-top:18px;color:var(--ink);
+}
+.sec-head .sub{color:var(--ink-soft);margin-top:16px;max-width:36em;font-size:.98rem}
+
+/* 02 悩み */
+.worries{border-top:1px solid var(--line)}
+.worry{
+  display:flex;gap:22px;align-items:baseline;
+  padding:24px 6px;border-bottom:1px solid var(--line);
+}
+.worry .q{
+  font-family:"Shippori Mincho",serif;font-style:italic;color:var(--gold-soft);
+  font-size:1.3rem;flex:none;width:30px;line-height:1.4;
+}
+.worry p{font-size:clamp(1.02rem,2.6vw,1.22rem);color:var(--ink-2);line-height:1.7}
+.worry:hover .q{color:var(--gold)}
+
+/* 03 失敗 */
+.fail-band{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.fail-band::before{
+  content:"";position:absolute;right:-10%;top:-30%;width:60%;height:160%;
+  background:radial-gradient(closest-side,rgba(194,164,99,.14),transparent);
+}
+.fail-band .label{color:var(--gold-soft)}
+.fail-band .label::before{background:var(--gold)}
+.fail-band h2{color:var(--paper)}
+.fail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:rgba(246,242,234,.13);border:1px solid rgba(246,242,234,.13);margin-top:8px}
+.fail-cell{background:var(--ink);padding:30px 26px;display:flex;gap:16px;align-items:flex-start}
+.fail-cell .x{font-family:"Shippori Mincho",serif;color:var(--gold-soft);font-size:1.1rem;flex:none;line-height:1.5}
+.fail-cell p{color:#d9dde0;font-size:.98rem;line-height:1.8}
+.insight{
+  margin-top:46px;padding:34px 34px 34px 30px;border-left:3px solid var(--gold-soft);
+  background:rgba(246,242,234,.05);
+}
+.insight p{font-family:"Shippori Mincho",serif;font-size:clamp(1.1rem,3vw,1.5rem);line-height:1.85;color:var(--paper-2)}
+.insight p b{color:var(--gold-soft);font-weight:700}
+
+/* 04 分かること */
+.know-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.know{padding:30px 28px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);background:rgba(251,248,242,.5);transition:background .35s}
+.know:hover{background:var(--paper-2)}
+.know .kn{font-family:"Shippori Mincho",serif;font-style:italic;color:var(--gold-soft);font-size:.95rem;letter-spacing:.1em}
+.know p{margin-top:10px;font-size:1.04rem;color:var(--ink-2);line-height:1.7;font-weight:500}
+
+/* 05 4タイプ */
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.type-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:3px;
+  padding:34px 30px 32px;position:relative;overflow:hidden;
+  transition:transform .4s cubic-bezier(.2,.7,.3,1),box-shadow .4s,border-color .4s;
+}
+.type-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold-soft)}
+.type-card .ltr{
+  font-family:"Shippori Mincho",serif;font-weight:800;font-size:3.4rem;line-height:1;
+  color:var(--gold-soft);opacity:.9;
+}
+.type-card h3{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.22rem;margin:16px 0 12px;color:var(--ink);letter-spacing:.03em}
+.type-card p{font-size:.94rem;color:var(--ink-soft);line-height:1.85}
+.type-card .tag{margin-top:18px;font-size:.74rem;letter-spacing:.16em;color:var(--gold);font-weight:700}
+
+/* 06 最終CTA */
+.final{background:linear-gradient(180deg,var(--paper),#efe9dd);text-align:center;padding:100px 0}
+.final h2{font-family:"Shippori Mincho",serif;font-weight:700;font-size:clamp(1.6rem,5vw,2.7rem);line-height:1.55;color:var(--ink)}
+.final p{color:var(--ink-soft);margin:22px auto 0;max-width:30em;font-size:1rem;line-height:1.95}
+.final .btn{margin-top:40px}
+.final .mini{margin-top:22px;font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+
+/* フッター */
+footer{background:var(--ink);color:#aeb8bf;padding:56px 0 40px;font-size:.84rem}
+.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:26px}
+footer .fbrand{font-family:"Shippori Mincho",serif;color:var(--paper-2);font-size:1.1rem;letter-spacing:.14em;margin-bottom:10px}
+footer a{color:#aeb8bf;text-decoration:none;transition:.3s}
+footer a:hover{color:var(--gold-soft)}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap}
+.foot-copy{margin-top:34px;padding-top:22px;border-top:1px solid rgba(246,242,234,.12);font-size:.74rem;color:#7e8a91;letter-spacing:.06em}
+
+/* フローティングCTA */
+.float-cta{
+  position:fixed;left:0;bottom:0;width:100%;z-index:40;
+  padding:13px 16px;background:rgba(30,44,58,.95);backdrop-filter:blur(8px);
+  display:flex;justify-content:center;
+  transform:translateY(120%);transition:transform .5s cubic-bezier(.2,.7,.3,1);
+  box-shadow:0 -10px 30px -18px rgba(0,0,0,.5);
+}
+.float-cta.show{transform:translateY(0)}
+.float-cta .btn{box-shadow:none;background:var(--gold);color:var(--ink);width:100%;max-width:520px;padding:16px}
+.float-cta .btn:hover{background:var(--gold-soft);transform:none}
+.float-cta .btn-line{background:var(--ink);color:var(--gold-soft)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="wrap head-row">
+    <div class="brand">転塾コンシェルジュ<small>TENJUKU CONCIERGE</small></div>
+    <a href="#cta" class="head-cta" onclick="goLine(event)">無料診断を受ける</a>
+  </div>
+</header>
+
+<!-- ============ 01 HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="hero-rule"></span>
+    <div class="hero-inner">
+      <span class="label reveal">No.01 &nbsp;無料・転塾診断</span>
+      <h1 class="reveal" style="transition-delay:.08s">今の塾、<br><span class="em">本当に合っていますか</span>。</h1>
+      <p class="lead reveal" style="transition-delay:.16s">
+        塾に通っているのに、成績が伸びない。<br>
+        その原因を、<b>続けるべきか・変えるべきか</b>という視点から、<br>
+        大学受験専門の第三者目線で整理します。
+      </p>
+      <div class="hero-actions reveal" style="transition-delay:.24s">
+        <a href="#cta" class="btn" onclick="goLine(event)"><span class="btn-line">L</span>無料で転塾診断を受ける<span class="arr">→</span></a>
+      </div>
+      <div class="trust reveal" style="transition-delay:.32s">
+        <span class="dot"></span>
+        <span>文系専門塾<b>プラトン</b>／理系専門塾<b>ガリレオ</b>を運営するチームが監修。<b>無理な勧誘はしません。</b>「今の塾を続けた方がよいご家庭」には、そうお伝えします。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 悩み ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">No.02 &nbsp;よくあるお悩み</span>
+      <h2>こんな不安を、抱えていませんか。</h2>
+    </div>
+    <div class="worries">
+      <div class="worry reveal"><span class="q">01</span><p>塾には通っているのに、模試の成績が上がらない。</p></div>
+      <div class="worry reveal"><span class="q">02</span><p>家では、ほとんど勉強している様子がない。</p></div>
+      <div class="worry reveal"><span class="q">03</span><p>塾で何をやっているのか、親には見えてこない。</p></div>
+      <div class="worry reveal"><span class="q">04</span><p>塾からの報告が少なく、状況が把握できない。</p></div>
+      <div class="worry reveal"><span class="q">05</span><p>このまま高3を迎えて大丈夫なのか、不安がある。</p></div>
+      <div class="worry reveal"><span class="q">06</span><p>転塾したいが、何を基準に判断すればいいか分からない。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 失敗する家庭 ============ -->
+<section class="sec fail-band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">No.03 &nbsp;よくある誤り</span>
+      <h2>転塾で「失敗する家庭」の、共通点。</h2>
+    </div>
+    <div class="fail-grid">
+      <div class="fail-cell reveal"><span class="x">×</span><p>知名度だけで選んでしまう</p></div>
+      <div class="fail-cell reveal"><span class="x">×</span><p>料金だけで判断してしまう</p></div>
+      <div class="fail-cell reveal"><span class="x">×</span><p>授業形式だけで決めてしまう</p></div>
+      <div class="fail-cell reveal"><span class="x">×</span><p>子どもの学習管理の課題を見落とす</p></div>
+      <div class="fail-cell reveal"><span class="x">×</span><p>志望校から逆算できていない</p></div>
+    </div>
+    <div class="insight reveal">
+      <p>塾選びで本当に見るべきは、<b>授業の質</b>そのものではありません。<br>「家庭学習を管理し、志望校から逆算してくれる<b>仕組み</b>があるか」です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 診断で分かること ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">No.04 &nbsp;診断で分かること</span>
+      <h2>無料診断で、見えてくること。</h2>
+      <p class="sub">LINEでいくつかの質問に答えるだけ。第三者の視点から、ご家庭の現在地を整理します。</p>
+    </div>
+    <div class="know-grid">
+      <div class="know reveal"><span class="kn">i.</span><p>今の塾を、続けるべきか</p></div>
+      <div class="know reveal"><span class="kn">ii.</span><p>転塾を、検討すべきか</p></div>
+      <div class="know reveal"><span class="kn">iii.</span><p>成績が伸びていない、本当の原因</p></div>
+      <div class="know reveal"><span class="kn">iv.</span><p>家庭学習の、改善ポイント</p></div>
+      <div class="know reveal"><span class="kn">v.</span><p>志望校に向けて必要な、学習管理</p></div>
+      <div class="know reveal"><span class="kn">vi.</span><p>お子さまに合う、塾のタイプ</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 4タイプ ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">No.05 &nbsp;4つの診断タイプ</span>
+      <h2>あなたのご家庭は、どのタイプ。</h2>
+      <p class="sub">診断結果は、大きく4つに分類されます。どのタイプでも、次の一手が明確になります。</p>
+    </div>
+    <div class="types">
+      <div class="type-card reveal">
+        <div class="ltr">A</div>
+        <h3>今の塾 活用タイプ</h3>
+        <p>塾自体は合っている。家庭学習や塾の使い方に、改善の余地があるご家庭。</p>
+        <div class="tag">CONTINUE</div>
+      </div>
+      <div class="type-card reveal" style="transition-delay:.08s">
+        <div class="ltr">B</div>
+        <h3>補助 追加タイプ</h3>
+        <p>今の塾は残しつつ、学習管理・課題管理・志望校戦略だけを外部で補うべきご家庭。</p>
+        <div class="tag">SUPPORT</div>
+      </div>
+      <div class="type-card reveal" style="transition-delay:.16s">
+        <div class="ltr">C</div>
+        <h3>転塾 検討タイプ</h3>
+        <p>今の塾の仕組みと、お子さまの課題が噛み合っていないご家庭。</p>
+        <div class="tag">CHANGE</div>
+      </div>
+      <div class="type-card reveal" style="transition-delay:.24s">
+        <div class="ltr">D</div>
+        <h3>早期 立て直しタイプ</h3>
+        <p>高3春以降、または志望校との距離が大きく、早めの介入が必要なご家庭。</p>
+        <div class="tag">URGENT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 最終CTA ============ -->
+<section class="final" id="cta">
+  <div class="wrap reveal">
+    <span class="label" style="justify-content:center">No.06 &nbsp;無料相談</span>
+    <h2 style="margin-top:18px">今の塾を続けるべきか、<br>まずは無料で診断する。</h2>
+    <p>LINEで簡単な質問に答えるだけ。診断結果と、ご家庭に合った「次の一手」をお伝えします。<br>文系ならプラトン、理系ならガリレオ。続けた方がよい場合は、そのままで大丈夫とお伝えします。</p>
+    <a href="#" class="btn" onclick="goLine(event)"><span class="btn-line">L</span>LINEで無料診断を始める<span class="arr">→</span></a>
+    <div class="mini">登録後すぐに診断がスタートします｜しつこい勧誘・営業は一切ありません</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div>
+        <div class="fbrand">転塾コンシェルジュ</div>
+        <div>大学受験専門の、塾選び・転塾相談サービス</div>
+        <!-- ▼差し替え：運営会社情報 -->
+        <div style="margin-top:14px;font-size:.78rem;color:#8e98a0">運営：株式会社HYUMA</div>
+      </div>
+      <!-- ▼差し替え：各種リンク先 -->
+      <div class="foot-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">特定商取引法に基づく表記</a>
+        <a href="#" onclick="goLine(event)">お問い合わせ（LINE）</a>
+      </div>
+    </div>
+    <div class="foot-copy">© 2026 HYUMA Inc. 転塾コンシェルジュ. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- フローティングCTA -->
+<div class="float-cta" id="floatCta">
+  <a href="#" class="btn" onclick="goLine(event)"><span class="btn-line">L</span>今の塾、続けるべき？ 無料で診断する<span class="arr">→</span></a>
+</div>
+
+<script>
+/* ▼差し替え：LINE公式アカウントの友だち追加URL */
+var LINE_ADD_URL = "https://lin.ee/XXXXXXX";
+
+/* CTAクリック → Lead計測 → LINEへ遷移（go-line相当の中継処理を内包） */
+function goLine(e){
+  if(e){e.preventDefault();}
+  try{ if(window.fbq){ fbq('track','Lead'); } }catch(err){}
+  try{ if(window.dataLayer){ window.dataLayer.push({event:'line_lead'}); } }catch(err){}
+  /* UTM等のクエリを引き継ぐ */
+  var url = LINE_ADD_URL;
+  setTimeout(function(){ window.location.href = url; }, 500);
+}
+
+/* ヘッダー：スクロールで背景を出す */
+var header = document.getElementById('header');
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 40){ header.classList.add('solid'); }
+  else{ header.classList.remove('solid'); }
+}, {passive:true});
+
+/* reveal アニメーション */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+  });
+}, {threshold:0.14});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+/* フローティングCTA：ヒーローを抜けたら表示、最終CTAが見えたら隠す */
+var floatCta = document.getElementById('floatCta');
+var heroSec = document.querySelector('.hero');
+var finalSec = document.getElementById('cta');
+var heroVisible = true, finalVisible = false;
+function updateFloat(){
+  if(!heroVisible && !finalVisible){ floatCta.classList.add('show'); }
+  else{ floatCta.classList.remove('show'); }
+}
+new IntersectionObserver(function(e){ heroVisible = e[0].isIntersecting; updateFloat(); }, {threshold:0.05}).observe(heroSec);
+new IntersectionObserver(function(e){ finalVisible = e[0].isIntersecting; updateFloat(); }, {threshold:0.15}).observe(finalSec);
+</script>
+</body>
+</html>
