@@ -467,6 +467,47 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
   /* mobile-only line breaks */
   .sp-br { display: inline; }
   @media (min-width: 600px) { .sp-br { display: none; } }
+
+  /* ───────────────── Smartphone refinements ───────────────── */
+  @media (max-width: 600px) {
+    section { padding: 54px 0; }
+    .sec-head { margin-bottom: 32px; }
+    .hero { padding: 40px 0 50px; }
+    .hero-grid { gap: 28px; }
+    .stats { margin-top: -18px; }
+    .final { padding: 60px 0 66px; }
+
+    /* trim generous card paddings so text has room on narrow screens */
+    .dx-card { padding: 24px 22px; }
+    .pain-card { padding: 22px 20px; }
+    .judge-card { padding: 22px 20px 24px; }
+    .judge-card .jc-head { flex-wrap: wrap; gap: 10px; }
+    .offer-grid { gap: 24px; }
+    .offer-card { padding: 22px 20px; }
+    .sample-body { padding: 20px 18px 22px; }
+    .ba-col { padding: 24px 22px; }
+
+    /* stats: keep big numbers readable in the 2-column grid */
+    .stat { padding: 22px 10px; }
+    .stat .num { font-size: 30px; }
+
+    /* type cards: shrink the letter tag column so the body has room */
+    .type-card { grid-template-columns: 92px 1fr; }
+    .type-tag { padding: 20px 12px; }
+    .type-tag .ltr { font-size: 26px; }
+    .type-body { padding: 20px 18px; }
+
+    /* flow: compact step badge to free up text width */
+    .flow-item { grid-template-columns: 66px 1fr; gap: 14px; padding: 20px 18px; }
+    .flow-step { width: 64px; height: 64px; border-radius: 16px; }
+    .flow-step .nn { font-size: 26px; }
+  }
+  @media (max-width: 360px) {
+    .wrap { width: calc(100% - 32px); }
+    .hero h1 { font-size: 28px; }
+    .stat .num { font-size: 27px; }
+    .type-card { grid-template-columns: 80px 1fr; }
+  }
 </style>
 </head>
 <body>
