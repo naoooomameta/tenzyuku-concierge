@@ -191,18 +191,18 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
   @media (min-width: 760px) { .head-cta { display: inline-flex; } }
 
   /* ───────────────── Buttons ───────────────── */
-  .btn-line {
-    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-    width: min(440px, 100%); min-height: 64px; padding: 0 28px;
+  .btn-cta {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    width: min(440px, 100%); min-height: 64px; padding: 0 30px;
     border-radius: 16px;
-    background: linear-gradient(180deg, #06C755 0%, #05B34C 100%);
+    background: linear-gradient(180deg, #3D79EE 0%, #2F6EE3 100%);
     color: #fff; font-family: var(--sans); font-weight: 700; font-size: 17px; letter-spacing: 0.02em;
-    box-shadow: 0 14px 30px rgba(6, 199, 85, 0.32);
+    box-shadow: 0 14px 30px rgba(47, 110, 227, 0.32);
     transition: transform 0.16s ease, box-shadow 0.16s ease; cursor: pointer; border: none;
   }
-  .btn-line:hover { transform: translateY(-2px); box-shadow: 0 18px 38px rgba(6, 199, 85, 0.4); }
-  .btn-line:active { transform: translateY(0); }
-  .btn-line .ico { width: 24px; height: 24px; flex: 0 0 auto; }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 38px rgba(47, 110, 227, 0.42); }
+  .btn-cta:active { transform: translateY(0); }
+  .btn-cta .ico { width: 20px; height: 20px; flex: 0 0 auto; }
   .btn-sub { margin-top: 12px; font-size: 12px; color: var(--muted); }
 
   /* ───────────────── Hero ───────────────── */
@@ -415,12 +415,12 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
     transform: translateY(120%); transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
   .float-cta.show { transform: translateY(0); }
-  .float-cta .btn-line { width: 100%; max-width: 560px; margin: 0 auto; min-height: 56px; font-size: 16px; }
+  .float-cta .btn-cta { width: 100%; max-width: 560px; margin: 0 auto; min-height: 56px; font-size: 16px; }
   .float-cta .ftext { display: none; }
   @media (min-width: 760px) {
     .float-cta { display: flex; align-items: center; justify-content: center; gap: 22px; }
     .float-cta .ftext { display: block; font-family: var(--serif); font-weight: 700; color: var(--navy); font-size: 16px; }
-    .float-cta .btn-line { width: auto; margin: 0; }
+    .float-cta .btn-cta { width: auto; margin: 0; }
   }
 
   /* ───────────────── Judgment criteria ───────────────── */
@@ -522,7 +522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-head">
   <div class="wrap site-head-inner">
     <div class="logo">転塾コンシェルジュ<small>大学受験 第三者相談窓口</small></div>
-    <a href="#cta-final" class="head-cta js-line">無料で診断する</a>
+    <a href="#cta-final" class="head-cta js-cta">無料で診断する</a>
   </div>
 </header>
 
@@ -540,9 +540,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         続けるべきか、変えるべきか。学年・成績・志望校・今の塾の状況をもとに、第三者の目線で整理します。
       </div>
       <div class="hero-cta-area fx fx-d3">
-        <button type="button" class="btn-line js-line" aria-label="無料で転塾診断を受ける（LINE）">
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.58 7.48 8.42 8.12.33.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.02.9.56 1.1-.46 5.9-3.48 8.05-5.95C21.4 13.6 22 12 22 10.23 22 5.69 17.52 2 12 2Z"/></svg>
-          無料で転塾診断を受ける（LINE）
+        <button type="button" class="btn-cta js-cta" aria-label="無料で転塾診断フォームへ進む">
+          無料で転塾診断を受ける
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
         <div class="micro">所要約3分／回答は選択式／<b>無理な勧誘はしません</b></div>
       </div>
@@ -832,9 +832,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="fx fx-d1">今の塾を続けるべきか、<br />まずは<span class="gold">無料で診断する</span>。</h2>
     <p class="lead fx fx-d2">LINEで簡単な質問に答えるだけ。診断結果と、ご家庭に合った「次の一手」をお伝えします。無理な勧誘は一切ありません。</p>
     <div class="cta-wrap fx fx-d2">
-      <button type="button" class="btn-line js-line" aria-label="LINEで無料診断を始める">
-        <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.58 7.48 8.42 8.12.33.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.02.9.56 1.1-.46 5.9-3.48 8.05-5.95C21.4 13.6 22 12 22 10.23 22 5.69 17.52 2 12 2Z"/></svg>
-        LINEで無料診断を始める
+      <button type="button" class="btn-cta js-cta" aria-label="無料診断フォームを開く">
+        無料で診断を始める
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
       <div class="reassure"><span>所要 約3分</span><span>完全無料</span><span>無理な勧誘なし</span></div>
     </div>
@@ -862,23 +862,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ═══════════ Floating CTA ═══════════ -->
 <div class="float-cta" id="floatCta" aria-hidden="true">
   <span class="ftext">今の塾、続けるべき？</span>
-  <button type="button" class="btn-line js-line" aria-label="無料で診断する（LINE）">
-    <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.58 7.48 8.42 8.12.33.07.77.22.88.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.02.9.56 1.1-.46 5.9-3.48 8.05-5.95C21.4 13.6 22 12 22 10.23 22 5.69 17.52 2 12 2Z"/></svg>
+  <button type="button" class="btn-cta js-cta" aria-label="無料で診断する（フォーム）">
     無料で診断する
+    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </button>
 </div>
 
 <script>
   /* =====================================================================
-     ▼差し替え: LINE友だち追加URL（Lead計測の中継を挟む設計）
-     本番では go-line.html 等のLead計測中継ページのURLを設定するか、
-     直接のLINE URL（https://lin.ee/xxxx）を設定してください。
+     ▼差し替え: 申し込みフォームURL（Googleフォーム / Typeform / 自社フォーム等）
+     ボタンを押すと、Lead計測の後にこのURLへ遷移します。
+     例: "https://forms.gle/xxxxxxx" または "/form/" など
      ===================================================================== */
-  var LINE_ADD_URL = "https://lin.ee/XXXXXXX";  // 例: "https://lin.ee/xxxxxxx" または "/go-line.html"
+  var FORM_URL = "https://forms.gle/XXXXXXX";  // ▼差し替え: 申し込みフォームのURL
 
   /* UTMパラメータを引き継いで遷移先に付与 */
-  function buildLineUrl() {
-    var base = LINE_ADD_URL;
+  function buildFormUrl() {
+    var base = FORM_URL;
     try {
       var qs = window.location.search;
       if (qs && qs.length > 1) {
@@ -888,16 +888,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     return base;
   }
 
-  /* CTAクリック: Lead計測 → 約500ms後にLINEへリダイレクト */
-  function handleLineClick(e) {
+  /* CTAクリック: Lead計測 → 約500ms後にフォームへリダイレクト */
+  function handleCtaClick(e) {
     if (e) e.preventDefault();
     try { if (window.fbq) fbq('track', 'Lead'); } catch (err) {}
-    try { if (window.dataLayer) window.dataLayer.push({ event: 'line_cta_click' }); } catch (err) {}
-    var url = buildLineUrl();
+    try { if (window.dataLayer) window.dataLayer.push({ event: 'form_cta_click' }); } catch (err) {}
+    var url = buildFormUrl();
     setTimeout(function () { window.location.href = url; }, 500);
   }
-  document.querySelectorAll('.js-line').forEach(function (el) {
-    el.addEventListener('click', handleLineClick);
+  document.querySelectorAll('.js-cta').forEach(function (el) {
+    el.addEventListener('click', handleCtaClick);
   });
 
   /* 診断プレビュー（自動進行） */
