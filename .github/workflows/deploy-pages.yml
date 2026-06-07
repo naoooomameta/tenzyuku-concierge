@@ -38,7 +38,7 @@ jobs:
         run: |
           # 公開物だけを _site にまとめる（README や .github を公開しない）
           mkdir -p _site
-          cp index.html _site/
+          cp *.html _site/
           # 将来アセットを追加したら、存在するものを公開物へコピー
           for d in assets img images css js fonts; do
             if [ -d "$d" ]; then cp -r "$d" _site/; fi
