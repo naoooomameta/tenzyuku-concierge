@@ -870,11 +870,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
   /* =====================================================================
-     ▼差し替え: 申し込みフォームURL（Googleフォーム / Typeform / 自社フォーム等）
-     ボタンを押すと、Lead計測の後にこのURLへ遷移します。
-     例: "https://forms.gle/xxxxxxx" または "/form/" など
+     CTAの遷移先 = 同一サイトの申し込みフォームページ（form.html）。
+     外部フォーム（Googleフォーム等）に変えたい場合はこのURLを差し替え。
      ===================================================================== */
-  var FORM_URL = "https://forms.gle/XXXXXXX";  // ▼差し替え: 申し込みフォームのURL
+  var FORM_URL = "form.html";  // 申し込みフォームページ。外部URLにも変更可
 
   /* UTMパラメータを引き継いで遷移先に付与 */
   function buildFormUrl() {
@@ -888,10 +887,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     return base;
   }
 
-  /* CTAクリック: Lead計測 → 約500ms後にフォームへリダイレクト */
+  /* CTAクリック: 計測(InitiateCheckout) → 約500ms後にフォームへ遷移
+     ※ 実際のLead（CV）はフォーム送信時に form.html 側で計測します */
   function handleCtaClick(e) {
     if (e) e.preventDefault();
-    try { if (window.fbq) fbq('track', 'Lead'); } catch (err) {}
+    try { if (window.fbq) fbq('track', 'InitiateCheckout'); } catch (err) {}
     try { if (window.dataLayer) window.dataLayer.push({ event: 'form_cta_click' }); } catch (err) {}
     var url = buildFormUrl();
     setTimeout(function () { window.location.href = url; }, 500);
