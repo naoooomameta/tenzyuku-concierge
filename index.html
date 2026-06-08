@@ -10,12 +10,21 @@
 <title>今の塾、本当に合っていますか？｜転塾コンシェルジュ｜大学受験 無料診断</title>
 <meta name="description" content="塾に通っているのに成績が伸びない高校生のご家庭へ。続けるべきか・変えるべきかを、大学受験専門の第三者目線で無料診断します。無理な勧誘はしません。" />
 
+<!-- ▼差し替え: 独自ドメイン導入時は canonical / og:url のURLを変更 -->
+<link rel="canonical" href="https://naoooomameta.github.io/tenzyuku-concierge/" />
+<meta name="theme-color" content="#0B2A52" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
 <!-- OGP -->
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://naoooomameta.github.io/tenzyuku-concierge/" />
+<meta property="og:site_name" content="転塾コンシェルジュ" />
+<meta property="og:locale" content="ja_JP" />
 <meta property="og:title" content="今の塾、本当に合っていますか？｜転塾コンシェルジュ" />
 <meta property="og:description" content="続けるべきか・変えるべきかを、大学受験専門の第三者目線で無料診断。無理な勧誘はしません。" />
-<!-- ▼差し替え: OGP画像URL（1200×630推奨） -->
-<meta property="og:image" content="OGP_IMAGE_URL_HERE" />
+<!-- ▼差し替え: SNSシェア用OGP画像（1200×630推奨）。暫定でFV写真を使用中 -->
+<meta property="og:image" content="https://naoooomameta.github.io/tenzyuku-concierge/assets/hero.webp" />
+<meta property="og:image:alt" content="転塾コンシェルジュ｜大学受験 無料の転塾診断" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- 構造化データ（FAQ）: 下部FAQと内容を一致させること。検索結果のリッチリザルト対象 -->
@@ -144,7 +153,7 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
-  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 700; color: var(--navy); letter-spacing: 0.01em; line-height: 1.5; }
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 700; color: var(--navy); letter-spacing: 0.01em; line-height: 1.5; word-break: auto-phrase; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; }
 
@@ -224,7 +233,7 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
     box-shadow: var(--shadow-sm); margin-bottom: 22px;
   }
   .hero .badge .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(47,110,227,0.18); }
-  .hero h1 { font-size: clamp(30px, 7.6vw, 50px); line-height: 1.4; letter-spacing: 0.005em; }
+  .hero h1 { font-size: clamp(30px, 7.6vw, 50px); line-height: 1.4; letter-spacing: 0.005em; word-break: keep-all; }
   .hero h1 .u { background-image: linear-gradient(transparent 62%, rgba(47,110,227,0.20) 62%); padding: 0 3px; }
   .hero h1 .acc { color: var(--accent); }
   .hero .sub { margin: 24px 0 0; font-size: 16px; color: var(--navy-soft); font-weight: 500; line-height: 2; }
@@ -416,9 +425,10 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
     background: rgba(244, 247, 251, 0.93); backdrop-filter: blur(12px);
     border-top: 1px solid var(--line);
-    transform: translateY(120%); transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transform: translateY(120%); visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0.35s;
   }
-  .float-cta.show { transform: translateY(0); }
+  .float-cta.show { transform: translateY(0); visibility: visible; }
   .float-cta .btn-cta { width: 100%; max-width: 560px; margin: 0 auto; min-height: 56px; font-size: 16px; }
   .float-cta .ftext { display: none; }
   @media (min-width: 760px) {
@@ -520,7 +530,7 @@ src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></nos
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM_ID_HERE"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<div class="topbar">塾に通っているのに成績が上がらない、その親御様へ。</div>
+<div class="topbar">塾に通っているのに成績が上がらない、そんな保護者様へ。</div>
 
 <!-- ═══════════ Header ═══════════ -->
 <header class="site-head">
@@ -535,7 +545,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap hero-grid">
     <div>
       <div class="badge fx"><span class="pulse"></span>大学受験専門・無料の転塾診断</div>
-      <h1 class="fx fx-d1">今の塾、<br class="sp-br" />本当に<span class="u">合っています</span>か？</h1>
+      <h1 class="fx fx-d1">今の塾、本当に<wbr /><span class="u">合っています</span>か？</h1>
       <p class="sub fx fx-d2">
         塾に通っているのに成績が伸びない。<br />
         それはお子さまの努力不足ではなく、<strong>「学習管理の仕組み」</strong>が足りていないだけかもしれません。
